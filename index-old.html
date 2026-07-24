@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروپوزال فروشگاه عطر | طراحی با وردپرس</title>
+    <link rel="stylesheet" href="./assets/IRANSans/FaNum/css/fontiran.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+      body {
+        font-family: "IRANSans_FaNum", sans-serif;
+        background: #f8fafc;
+      }
+      .rtl {
+        direction: rtl;
+      }
+      .card-shadow {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      }
+      .border-gold {
+        border-color: #b8860b;
+      }
+      .bg-gold-soft {
+        background-color: #fbf6ed;
+      }
+      .text-gold {
+        color: #b8860b;
+      }
+      .check-list label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        transition: background 0.15s ease;
+      }
+      .check-list label:hover {
+        background: #f1f5f9;
+      }
+      .check-list input[type="checkbox"] {
+        width: 1.1rem;
+        height: 1.1rem;
+        accent-color: #b8860b;
+        flex-shrink: 0;
+      }
+      .feature-table td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e9edf2;
+      }
+      .feature-table tr:last-child td {
+        border-bottom: none;
+      }
+      .tag-sm {
+        font-size: 0.7rem;
+        background: #eef2f6;
+        padding: 0.15rem 0.6rem;
+        border-radius: 999px;
+        color: #334155;
+        white-space: nowrap;
+      }
+      .demo-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid #e9edf2;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      }
+    </style>
+  </head>
+  <body class="rtl antialiased p-6 md:p-10 text-slate-700">
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl card-shadow p-6 md:p-10">
+      <!-- هدر -->
+      <div class="border-b border-slate-200 pb-6 mb-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+        >
+          <div>
+            <h1
+              class="text-3xl font-bold text-slate-800 flex items-center gap-2"
+            >
+              <span class="text-gold">✦</span> پیشنهاد طراحی فروشگاه عطر
+            </h1>
+            <p class="text-slate-500 mt-1 text-sm">
+              بر پایه وردپرس + ووکامرس | تحویل سریع، مقرون‌به‌صرفه و حرفه‌ای
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- معرفی -->
+      <div class="bg-gold-soft/50 rounded-2xl p-5 mb-8 border border-gold/10">
+        <p class="text-slate-600 leading-relaxed">
+          <span class="font-bold text-slate-800">چشم‌انداز:</span> فروشگاهی
+          تخصصی برای عطر و ادکلن، با حس اعتماد و اصالت، قابل‌توسعه برای
+          دسته‌بندی‌های جدید. مسیر اجرایی مبتنی بر زیرساخت حرفه‌ای ووکامرس، بدون
+          افت کیفیت یا امکانات.
+        </p>
+      </div>
+
+      <!-- جدول ویژگی‌های پایه -->
+      <div class="mb-10">
+        <h2
+          class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2"
+        >
+          <span class="w-1 h-7 bg-gold rounded-full"></span> ویژگی‌های پایه
+          فروشگاه
+        </h2>
+        <div
+          class="overflow-x-auto rounded-2xl border border-slate-200 bg-white"
+        >
+          <table class="feature-table w-full text-sm">
+            <thead class="bg-slate-50 text-slate-600 font-semibold">
+              <tr>
+                <td class="py-3 px-4">امکان</td>
+                <td class="py-3 px-4">توضیح</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="font-medium">مدیریت محصولات</span></td>
+                <td>
+                  ثبت عطر با برند، حجم، جنسیت، قیمت، موجودی، تصاویر و گالری
+                  اختصاصی رایحه
+                </td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">جستجو و فیلتر</span></td>
+                <td>بر اساس برند، قیمت، حجم، جنسیت و خانواده رایحه</td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">صفحه محصول تخصصی</span></td>
+                <td>نمایش نت‌ها، توضیحات رایحه، گالری، نظرات کاربران</td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">تجربه خرید کامل</span></td>
+                <td>
+                  سبد خرید، پرداخت آنلاین با درگاه‌های ایرانی، ارسال با
+                  پیک/تیپاکس/پست
+                </td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">بازاریابی و فروش</span></td>
+                <td>کوپن تخفیف، کمپین‌های فروش ویژه، پیشنهاد شخصی‌سازی‌شده</td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">اطلاع‌رسانی خودکار</span></td>
+                <td>پیامک وضعیت سفارش، اطلاع‌رسانی موجودی به مدیران</td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">گزارش‌گیری</span></td>
+                <td>گزارش فروش، سفارش‌ها، درآمد، عملکرد محصولات پرفروش</td>
+              </tr>
+              <tr>
+                <td><span class="font-medium">پنل مدیریت</span></td>
+                <td>پنل فارسی ساده و کاربرپسند برای مدیریت روزمره</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">
+          ✓ تمام ویژگی‌های بالا در تمام گزینه‌ها گنجانده شده‌اند.
+        </p>
+      </div>
+
+      <!-- ویژگی‌های اختیاری + قیمت + زمان -->
+      <div class="mb-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <h2 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+            <span class="w-1 h-7 bg-gold rounded-full"></span> ویژگی‌های اختیاری
+            (اضافه کنید)
+          </h2>
+          <div
+            class="flex flex-wrap items-center gap-4 bg-slate-100 px-5 py-2.5 rounded-full"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-slate-500 text-sm font-medium">قیمت پایه:</span>
+              <span
+                class="font-bold text-slate-800 text-lg"
+                id="basePriceDisplay"
+                >۲۰۰,۰۰۰,۰۰۰</span
+              >
+              <span class="text-slate-500 text-sm">تومان</span>
+            </div>
+            <div class="w-px h-6 bg-slate-300 hidden md:block"></div>
+            <div class="flex items-center gap-2">
+              <span class="text-slate-500 text-sm font-medium">زمان پایه:</span>
+              <span
+                class="font-bold text-slate-800 text-lg"
+                id="baseTimeDisplay"
+                >۶</span
+              >
+              <span class="text-slate-500 text-sm">هفته</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- لیست چک‌باکس‌ها با قیمت و زمان -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 check-list bg-slate-50/70 p-5 rounded-2xl border border-slate-200"
+        >
+          <!-- اتصال حسابداری -->
+          <label
+            class="flex flex-wrap items-center gap-2 text-slate-700"
+            id="label-connect"
+          >
+            <input
+              type="checkbox"
+              data-price="35000000"
+              data-time="1"
+              class="extra-feature"
+              id="connect-accounting"
+            />
+            <span class="flex-1 min-w-[120px]"
+              >اتصال به نرم‌افزار حسابداری</span
+            >
+            <span class="tag-sm">+۳۵,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۱ هفته</span>
+          </label>
+          <!-- خلاصه‌سازی AI -->
+          <label
+            class="flex flex-wrap items-center gap-2 text-slate-700"
+            id="label-ai"
+          >
+            <input
+              type="checkbox"
+              data-price="25000000"
+              data-time="0.5"
+              class="extra-feature"
+              id="ai-summary"
+            />
+            <span class="flex-1 min-w-[120px]"
+              >خلاصه‌سازی هوشمند نظرات (AI)</span
+            >
+            <span class="tag-sm">+۲۵,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۰.۵ هفته</span>
+          </label>
+          <!-- گزارش پیشرفته -->
+          <label
+            class="flex flex-wrap items-center gap-2 text-slate-700"
+            id="label-report"
+          >
+            <input
+              type="checkbox"
+              data-price="18000000"
+              data-time="0.5"
+              class="extra-feature"
+              id="advanced-report"
+            />
+            <span class="flex-1 min-w-[120px]">گزارش‌گیری مدیریتی پیشرفته</span>
+            <span class="tag-sm">+۱۸,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۰.۵ هفته</span>
+          </label>
+          <!-- اپلیکیشن اندروید -->
+          <label
+            class="flex flex-wrap items-center gap-2 text-slate-700"
+            id="label-app"
+          >
+            <input
+              type="checkbox"
+              data-price="45000000"
+              data-time="2.5"
+              class="extra-feature"
+              id="android-app"
+            />
+            <span class="flex-1 min-w-[120px]">اپلیکیشن اندروید اختصاصی</span>
+            <span class="tag-sm">+۴۵,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۲.۵ هفته</span>
+          </label>
+          <!-- NEXT.JS (ترکیبی) -->
+          <label
+            class="flex flex-wrap items-center gap-2 text-slate-700"
+            id="label-nextjs"
+          >
+            <input
+              type="checkbox"
+              data-price="97000000"
+              data-time="5"
+              class="extra-feature"
+              id="nextjs-full"
+            />
+            <span class="flex-1 min-w-[120px]"
+              >پیاده‌سازی وبسایت + پنل ادمین با Next.js</span
+            >
+            <span class="tag-sm">+۹۷,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۵ هفته</span>
+          </label>
+          <!-- قالب دوم اختصاصی -->
+          <label
+            class="flex flex-wrap items-center gap-2 text-slate-700"
+            id="label-second-theme"
+          >
+            <input
+              type="checkbox"
+              data-price="38000000"
+              data-time="2"
+              class="extra-feature"
+              id="second-theme"
+            />
+            <span class="flex-1 min-w-[120px]"
+              >پیاده‌سازی اختصاصی قالب دوم</span
+            >
+            <span class="tag-sm">+۳۸,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۲ هفته</span>
+          </label>
+        </div>
+
+        <!-- جمع کل قیمت و زمان -->
+        <div
+          class="mt-6 flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-xl border border-slate-200"
+        >
+          <div class="flex flex-wrap items-center gap-6">
+            <div class="flex items-center gap-4">
+              <span class="text-slate-600 font-medium">قیمت نهایی:</span>
+              <span class="text-3xl font-extrabold text-gold" id="totalPrice"
+                >۲۰۰,۰۰۰,۰۰۰</span
+              >
+              <span class="text-slate-500 text-sm">تومان</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-slate-600 font-medium">زمان تحویل:</span>
+              <span
+                class="text-2xl font-extrabold text-indigo-700"
+                id="totalTime"
+                >۶</span
+              >
+              <span class="text-slate-500 text-sm">هفته</span>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 text-xs text-slate-400 bg-slate-100 px-4 py-2 rounded-full"
+          >
+            <span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>
+            <span>قابل انتخاب بر اساس نیاز</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- دموی صفحه اصلی - چشم‌انداز -->
+      <div class="mb-8 bg-slate-50 rounded-2xl p-6 border border-slate-200">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🖼️</span>
+          <h3 class="text-lg font-bold text-slate-800">
+            چشم‌انداز صفحه اصلی فروشگاه
+          </h3>
+          <span class="text-sm text-slate-400 mr-2"
+            >(یک نمونه از طراحی احتمالی)</span
+          >
+        </div>
+        <p class="text-slate-500 text-sm mb-4">
+          یک صفحه اصلی جذاب و حرفه‌ای می‌تواند چیز شبیه به این باشد:
+        </p>
+        <div class="bg-white rounded-xl p-2 shadow-sm">
+          <img
+            src="./assets/screenshot.png"
+            alt="دموی صفحه اصلی فروشگاه عطر - چشم‌انداز"
+            class="demo-image w-full"
+            onerror="
+              this.style.display = 'none';
+              document.getElementById('fallback-demo').style.display = 'block';
+            "
+          />
+          <div
+            id="fallback-demo"
+            class="hidden text-center py-8 text-slate-400 text-sm"
+          >
+            <span class="block text-4xl mb-2">📷</span>
+            تصویر دمو در مسیر
+            <span class="font-mono text-xs">assets/screenshot.png</span> قرار
+            ندارد.
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 mt-3">
+          * این تصویر صرفاً یک نمونه بصری برای درک بهتر فضای طراحی است.
+        </p>
+      </div>
+
+      <!-- نکات مهم درباره هزینه‌های جانبی -->
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-8">
+        <h3 class="font-bold text-amber-800 flex items-center gap-2 mb-3">
+          <span>⚠️</span> نکات مهم درباره هزینه‌های جانبی
+        </h3>
+        <ul class="list-disc list-inside space-y-2 text-sm text-amber-700 pr-4">
+          <li>
+            <span class="font-semibold">هزینه سرور، هاست و دامنه</span> و تمدید
+            آن‌ها به عهده کارفرما (شما) خواهد بود.
+          </li>
+          <li>
+            <span class="font-semibold">پیاده‌سازی با Next.js</span> نیازمند
+            <span class="font-bold">سرور VPS اختصاصی</span> بوده و با هاست‌های
+            معمولی وردپرسی پاسخگو نیست.
+          </li>
+          <li>
+            <span class="font-semibold">هزینه سرویس هوش مصنوعی (AI)</span> برای
+            خلاصه‌سازی نظرات، جداگانه و بر اساس مصرف سرویس‌دهنده محاسبه می‌شود.
+          </li>
+          <li>
+            <span class="font-semibold">هزینه پنل پیامکی</span> نیز جداگانه و
+            مطابق با تعرفه‌های سرویس‌دهنده پیامک خواهد بود.
+          </li>
+        </ul>
+      </div>
+
+      <!-- پشتیبانی و نحوه پرداخت -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-200 text-sm"
+      >
+        <div>
+          <span class="font-bold text-slate-700 block">🛡 پشتیبانی</span>
+          <span class="text-slate-500">۳ ماه رایگان پس از تحویل</span>
+          <span class="text-slate-500 block"
+            >رفع باگ، راهنمایی، اصلاح جزئی</span
+          >
+        </div>
+        <div>
+          <span class="font-bold text-slate-700 block">💳 نحوه پرداخت</span>
+          <span class="text-slate-500">۴۰٪ شروع پروژه</span>
+          <span class="text-slate-500 block">۳۵٪ تأیید طراحی</span>
+          <span class="text-slate-500 block">۲۵٪ تحویل نهایی</span>
+        </div>
+      </div>
+
+      <!-- فوتر -->
+      <div
+        class="mt-10 pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-slate-500"
+      >
+        <div class="text-xs text-slate-400">تابستان ۱۴۰۵</div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const BASE_PRICE = 200000000;
+        const BASE_TIME = 6;
+
+        const basePriceDisplay = document.getElementById("basePriceDisplay");
+        const totalPriceSpan = document.getElementById("totalPrice");
+        const baseTimeDisplay = document.getElementById("baseTimeDisplay");
+        const totalTimeSpan = document.getElementById("totalTime");
+
+        const checkboxes = document.querySelectorAll(".extra-feature");
+
+        function formatNumber(num) {
+          return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        function updateTotal() {
+          let extraPrice = 0;
+          let extraTime = 0;
+
+          checkboxes.forEach((cb) => {
+            if (cb.checked) {
+              const price = parseInt(cb.getAttribute("data-price"), 10) || 0;
+              const time = parseFloat(cb.getAttribute("data-time")) || 0;
+              extraPrice += price;
+              extraTime += time;
+            }
+          });
+
+          const totalPrice = BASE_PRICE + extraPrice;
+          const totalTime = BASE_TIME + extraTime;
+
+          basePriceDisplay.textContent = formatNumber(BASE_PRICE);
+          totalPriceSpan.textContent = formatNumber(totalPrice);
+
+          baseTimeDisplay.textContent = BASE_TIME;
+          totalTimeSpan.textContent = Number.isInteger(totalTime)
+            ? totalTime
+            : totalTime.toFixed(1);
+        }
+
+        checkboxes.forEach((cb) => {
+          cb.addEventListener("change", updateTotal);
+        });
+
+        updateTotal();
+      })();
+    </script>
+  </body>
+</html>
