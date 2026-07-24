@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html dir="rtl" lang="fa">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>پروپوزال کامل فروشگاه تخصصی عطر و ادکلن</title>
-    <link rel="stylesheet" href="./assets/IRANSans/FaNum/css/fontiran.css" />
+    <link href="./assets/IRANSans/FaNum/css/fontiran.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
@@ -167,6 +167,14 @@
       .guide-card li {
         margin-bottom: 4px;
       }
+      .demo-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 18px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      }
       @media print {
         body {
           background: white;
@@ -215,8 +223,8 @@
             >
               <span class="block text-xs text-slate-500">قیمت پایه</span>
               <strong
-                id="basePriceDisplay"
                 class="block text-xl text-slate-900 mt-1"
+                id="basePriceDisplay"
                 >۲۰۰,۰۰۰,۰۰۰</strong
               >
               <span class="text-xs text-slate-400">تومان</span>
@@ -225,7 +233,7 @@
               class="rounded-2xl bg-gold-soft border border-amber-100 p-4 text-center"
             >
               <span class="block text-xs text-slate-500">زمان پایه</span>
-              <strong id="baseTimeDisplay" class="block text-xl text-gold mt-1"
+              <strong class="block text-xl text-gold mt-1" id="baseTimeDisplay"
                 >۶</strong
               >
               <span class="text-xs text-slate-400">هفته</span>
@@ -233,7 +241,6 @@
           </div>
         </div>
       </header>
-
       <!-- Vision -->
       <section class="grid grid-cols-1 lg:grid-cols-[1.25fr_.75fr] gap-5 mb-10">
         <div
@@ -261,7 +268,6 @@
           </div>
         </div>
       </section>
-
       <!-- Delivered pages -->
       <section class="mb-10">
         <h2
@@ -319,7 +325,6 @@
           </div>
         </div>
       </section>
-
       <!-- Base feature table -->
       <section class="mb-10">
         <div class="flex flex-wrap items-end justify-between gap-3 mb-4">
@@ -331,12 +336,11 @@
           <span class="included-badge">✓ در قیمت پایه محاسبه شده</span>
         </div>
         <div class="overflow-x-auto rounded-2xl border border-slate-200">
-          <table class="feature-table w-full min-w-[780px] text-sm">
+          <table class="feature-table w-full text-sm min-w-[660px]">
             <thead class="bg-slate-50 text-slate-700">
               <tr>
-                <th class="text-right w-[24%]">بخش</th>
+                <th class="text-right w-[27%]">بخش</th>
                 <th class="text-right">شرح امکانات</th>
-                <th class="text-right w-[16%]">محدوده</th>
               </tr>
             </thead>
             <tbody>
@@ -349,7 +353,6 @@
                   نوع عطر، حجم، جنسیت، قیمت اصلی و تخفیف، موجودی، وضعیت انتشار،
                   تصویر شاخص و گالری.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
@@ -359,7 +362,6 @@
                   خانواده بویایی، آکوردها، نت‌های آغازین، میانی و پایه،
                   ماندگاری، پخش بو، فصل و موقعیت مناسب استفاده.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
@@ -370,7 +372,6 @@
                   جنسیت، نوع، خانواده رایحه، آکورد، نت، ماندگاری، پخش بو، فصل،
                   موجودی و تخفیف؛ مرتب‌سازی و صفحه‌بندی.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">صفحه محصول حرفه‌ای</td>
@@ -378,7 +379,6 @@
                   گالری، قیمت و موجودی، توضیحات، ویژگی‌های تخصصی، هرم نت‌ها،
                   دیدگاه و امتیاز، محصولات مشابه و اخیراً مشاهده‌شده.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
@@ -388,7 +388,6 @@
                   نمایش سریع، نشان تخفیف و ویژه، افزودن مستقیم به سبد،
                   علاقه‌مندی، مقایسه و کنترل تعداد محصول.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">راهنمای انتخاب عطر</td>
@@ -396,7 +395,6 @@
                   فرم انتخاب بر اساس سلیقه، جنسیت، خانواده رایحه، فصل و موقعیت
                   استفاده و هدایت کاربر به نتایج مناسب.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">سبد خرید و کوپن</td>
@@ -404,34 +402,24 @@
                   سبد پایدار، افزایش و کاهش تعداد، حذف کالا، محاسبه تخفیف و
                   هزینه ارسال، کد تخفیف و نمایش جمع نهایی به تومان.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">پرداخت آنلاین</td>
                 <td>
-                  فرآیند کامل تسویه‌حساب، ثبت سفارش، اتصال به درگاه بانکی منتخب،
-                  مدیریت نتیجه موفق/ناموفق/لغوشده/در انتظار و حفظ صحیح سبد در
-                  خطاها.
+                  فرآیند کامل تسویه‌حساب و ثبت سفارش، اتصال و راه‌اندازی یک
+                  درگاه بانکی انتخابی، مدیریت نتیجه موفق، ناموفق، لغوشده یا در
+                  انتظار و حفظ صحیح سبد خرید در صورت بروز خطا.
                 </td>
-                <td><span class="included-badge">راه‌اندازی یک درگاه</span></td>
-              </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">ارسال و رهگیری</td>
-                <td>
-                  تعریف روش و هزینه ارسال، حد ارسال رایگان، ثبت کد رهگیری، نمایش
-                  وضعیت سفارش و امکان اتصال به سرویس حمل منتخب.
-                </td>
-                <td><span class="included-badge">یک روش اصلی</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
                   ایمیل و پیامک سفارش
                 </td>
                 <td>
-                  اطلاع‌رسانی ثبت سفارش و تغییر وضعیت برای مشتری و مدیر، با
-                  اتصال به سرویس ایمیل و پنل پیامکی منتخب کارفرما.
+                  پیاده‌سازی سناریوهای اصلی اطلاع‌رسانی ثبت سفارش و تغییر وضعیت
+                  برای مشتری و مدیر، از طریق اتصال به سرویس ایمیل و پنل پیامکی
+                  انتخابی کارفرما.
                 </td>
-                <td><span class="included-badge">سناریوهای اصلی</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">بازاریابی و فروش</td>
@@ -440,7 +428,6 @@
                   تبلیغاتی، محصولات جدید/ویژه/تخفیف‌دار، خبرنامه و پیشنهادهای
                   مرتبط.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
@@ -450,7 +437,6 @@
                   وبلاگ، صفحه مقاله، درباره ما، تماس با ما، قوانین و مقررات،
                   محتوای راهنما، مدیریت منو و بخش‌های اصلی سایت.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">پنل مشتری</td>
@@ -459,7 +445,6 @@
                   علاقه‌مندی، مقایسه، دیدگاه‌ها، تیکت پشتیبانی، مرجوعی و کیف پول
                   نمایشی.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
@@ -470,23 +455,21 @@
                   موبایل/تبلت/دسکتاپ، بهینه‌سازی تجربه کاربری و رعایت ساختار
                   مناسب فروشگاه ایرانی.
                 </td>
-                <td><span class="included-badge">پایه</span></td>
               </tr>
               <tr>
                 <td class="font-semibold text-slate-800">
                   آموزش و پشتیبانی تحویل
                 </td>
                 <td>
-                  آموزش مدیریت محصولات، سفارش‌ها، محتوا و تخفیف‌ها؛ رفع باگ و
-                  اصلاحات جزئی تا سه ماه پس از تحویل نهایی.
+                  آموزش مدیریت محصولات، سفارش‌ها، محتوا و تخفیف‌ها؛ به‌همراه سه
+                  ماه پشتیبانی پس از تحویل نهایی برای رفع باگ، راهنمایی و
+                  اصلاحات جزئی.
                 </td>
-                <td><span class="included-badge">۳ ماه</span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
-
       <!-- Admin details -->
       <section class="mb-10 rounded-2xl bg-slate-900 text-slate-200 p-5 md:p-7">
         <div class="flex flex-col lg:flex-row gap-6">
@@ -544,7 +527,6 @@
           </div>
         </div>
       </section>
-
       <!-- Optional features -->
       <section class="mb-8">
         <div
@@ -563,7 +545,6 @@
             </p>
           </div>
         </div>
-
         <div
           class="grid grid-cols-1 md:grid-cols-2 gap-4"
           id="optionalFeatures"
@@ -571,11 +552,11 @@
           <label class="optional-card">
             <div class="flex items-start gap-3">
               <input
-                type="checkbox"
                 class="extra-feature mt-1"
                 data-price="25000000"
                 data-time="0.5"
                 id="ai-summary"
+                type="checkbox"
               />
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-center justify-between gap-2">
@@ -594,15 +575,14 @@
               </div>
             </div>
           </label>
-
           <label class="optional-card">
             <div class="flex items-start gap-3">
               <input
-                type="checkbox"
                 class="extra-feature mt-1"
                 data-price="18000000"
                 data-time="0.5"
                 id="advanced-report"
+                type="checkbox"
               />
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-center justify-between gap-2">
@@ -622,15 +602,14 @@
               </div>
             </div>
           </label>
-
           <label class="optional-card">
             <div class="flex items-start gap-3">
               <input
-                type="checkbox"
                 class="extra-feature mt-1"
                 data-price="0"
                 data-time="0"
                 id="android-app"
+                type="checkbox"
               />
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-center justify-between gap-2">
@@ -650,15 +629,14 @@
               </div>
             </div>
           </label>
-
           <label class="optional-card">
             <div class="flex items-start gap-3">
               <input
-                type="checkbox"
                 class="extra-feature mt-1"
                 data-price="97000000"
                 data-time="5"
                 id="nextjs-full"
+                type="checkbox"
               />
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-center justify-between gap-2">
@@ -679,15 +657,14 @@
               </div>
             </div>
           </label>
-
           <label class="optional-card">
             <div class="flex items-start gap-3">
               <input
-                type="checkbox"
                 class="extra-feature mt-1"
                 data-price="38000000"
                 data-time="2"
                 id="second-theme"
+                type="checkbox"
               />
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-center justify-between gap-2">
@@ -707,7 +684,6 @@
               </div>
             </div>
           </label>
-
           <div
             class="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 flex items-center"
           >
@@ -724,7 +700,6 @@
           </div>
         </div>
       </section>
-
       <!-- Dynamic summary -->
       <section
         class="summary-sticky rounded-2xl border border-slate-200 bg-white/95 backdrop-blur p-4 md:p-5 shadow-xl mb-10"
@@ -766,21 +741,18 @@
           </div>
         </div>
       </section>
-
-      <!-- Visual preview -->
+      <!-- Visual preview - now full width and centered -->
       <section
         class="mb-10 rounded-2xl bg-slate-50 border border-slate-200 p-5 md:p-7"
       >
-        <div
-          class="grid grid-cols-1 lg:grid-cols-[.72fr_1.28fr] gap-6 items-start"
-        >
-          <div>
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-5">
             <span class="text-xs text-gold">نمای ظاهری پیشنهادی</span>
             <h2 class="text-xl font-bold text-slate-900 mt-2">
               نمونه ظاهر پیشنهادی فروشگاه
             </h2>
-            <p class="text-sm text-slate-500 leading-7 mt-3">
-              تصویر مقابل به‌عنوان رفرنس نمای ظاهری پیشنهادی در ارائه آمده است.
+            <p class="text-sm text-slate-500 leading-7 mt-2 max-w-2xl mx-auto">
+              تصویر زیر به‌عنوان رفرنس نمای ظاهری پیشنهادی در ارائه آمده است.
               چیدمان نهایی می‌تواند بر اساس سلیقه کارفرما، رنگ سازمانی، لوگو و
               نوع محتوای واقعی فروشگاه شخصی‌سازی شود.
             </p>
@@ -796,10 +768,18 @@
                   'block';
               "
             />
+            <div
+              id="fallback-demo"
+              class="hidden text-center py-8 text-slate-400 text-sm"
+            >
+              <span class="block text-4xl mb-2">📷</span>
+              تصویر دمو در مسیر
+              <span class="font-mono text-xs">assets/screenshot.png</span> قرار
+              ندارد.
+            </div>
           </div>
         </div>
       </section>
-
       <!-- Costs and scope -->
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-9">
         <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5">
@@ -847,7 +827,6 @@
           </ul>
         </div>
       </section>
-
       <!-- Service guidance -->
       <section
         class="mb-9 rounded-2xl border border-slate-200 bg-slate-50 p-5 md:p-6"
@@ -916,7 +895,6 @@
           </div>
         </div>
       </section>
-
       <!-- Payment/support -->
       <section
         class="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-slate-200 pt-7 text-sm"
@@ -943,7 +921,6 @@
           >
         </div>
       </section>
-
       <footer
         class="mt-9 pt-5 border-t border-slate-200 flex flex-col md:flex-row justify-between gap-2 text-xs text-slate-400"
       >
@@ -951,7 +928,6 @@
         <span>تابستان ۱۴۰۵</span>
       </footer>
     </main>
-
     <script>
       (function () {
         const BASE_PRICE = 200000000;
