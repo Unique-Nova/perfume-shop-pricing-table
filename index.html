@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>پروپوزال فروشگاه عطر | طراحی با وردپرس</title>
-    <link rel="stylesheet" href="./assets//IRANSans/FaNum/css/fontiran.css" />
+    <link rel="stylesheet" href="./assets/IRANSans/FaNum/css/fontiran.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
@@ -45,14 +45,6 @@
         accent-color: #b8860b;
         flex-shrink: 0;
       }
-      .price-badge {
-        background: #1e293b;
-        color: white;
-        padding: 0.25rem 1rem;
-        border-radius: 999px;
-        font-weight: 600;
-        font-size: 0.85rem;
-      }
       .feature-table td {
         padding: 0.75rem 1rem;
         border-bottom: 1px solid #e9edf2;
@@ -67,6 +59,13 @@
         border-radius: 999px;
         color: #334155;
         white-space: nowrap;
+      }
+      .demo-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid #e9edf2;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
       }
     </style>
   </head>
@@ -161,8 +160,7 @@
           </table>
         </div>
         <p class="text-xs text-slate-400 mt-2">
-          ✓ تمام ویژگی‌های بالا در هر دو سناریو (پایه و پیشرفته) گنجانده
-          شده‌اند.
+          ✓ تمام ویژگی‌های بالا در تمام گزینه‌ها گنجانده شده‌اند.
         </p>
       </div>
 
@@ -191,7 +189,7 @@
               <span
                 class="font-bold text-slate-800 text-lg"
                 id="baseTimeDisplay"
-                >۴</span
+                >۶</span
               >
               <span class="text-slate-500 text-sm">هفته</span>
             </div>
@@ -270,40 +268,40 @@
             <span class="tag-sm">+۴۵,۰۰۰,۰۰۰</span>
             <span class="tag-sm bg-indigo-50 text-indigo-700">+۲.۵ هفته</span>
           </label>
-          <!-- NEXT.JS (جدید) -->
+          <!-- NEXT.JS (ترکیبی) -->
           <label
             class="flex flex-wrap items-center gap-2 text-slate-700"
             id="label-nextjs"
           >
             <input
               type="checkbox"
-              data-price="55000000"
-              data-time="3"
+              data-price="97000000"
+              data-time="5"
               class="extra-feature"
-              id="nextjs-front"
+              id="nextjs-full"
             />
             <span class="flex-1 min-w-[120px]"
-              >پیاده‌سازی وبسایت با Next.js</span
+              >پیاده‌سازی وبسایت + پنل ادمین با Next.js</span
             >
-            <span class="tag-sm">+۵۵,۰۰۰,۰۰۰</span>
-            <span class="tag-sm bg-indigo-50 text-indigo-700">+۳ هفته</span>
+            <span class="tag-sm">+۹۷,۰۰۰,۰۰۰</span>
+            <span class="tag-sm bg-indigo-50 text-indigo-700">+۵ هفته</span>
           </label>
-          <!-- پنل ادمین NEXT.JS (جدید) -->
+          <!-- قالب دوم اختصاصی -->
           <label
             class="flex flex-wrap items-center gap-2 text-slate-700"
-            id="label-nextjs-admin"
+            id="label-second-theme"
           >
             <input
               type="checkbox"
-              data-price="42000000"
+              data-price="38000000"
               data-time="2"
               class="extra-feature"
-              id="nextjs-admin"
+              id="second-theme"
             />
             <span class="flex-1 min-w-[120px]"
-              >پنل ادمین اختصاصی با Next.js</span
+              >پیاده‌سازی اختصاصی قالب دوم</span
             >
-            <span class="tag-sm">+۴۲,۰۰۰,۰۰۰</span>
+            <span class="tag-sm">+۳۸,۰۰۰,۰۰۰</span>
             <span class="tag-sm bg-indigo-50 text-indigo-700">+۲ هفته</span>
           </label>
         </div>
@@ -325,7 +323,7 @@
               <span
                 class="text-2xl font-extrabold text-indigo-700"
                 id="totalTime"
-                >۴</span
+                >۶</span
               >
               <span class="text-slate-500 text-sm">هفته</span>
             </div>
@@ -337,21 +335,77 @@
             <span>قابل انتخاب بر اساس نیاز</span>
           </div>
         </div>
-        <p class="text-xs text-slate-400 mt-2">
-          * با انتخاب هر ویژگی، قیمت و زمان به‌روز می‌شود. سناریوی پیشرفته معادل
-          انتخاب تمام گزینه‌هاست.
+      </div>
+
+      <!-- دموی صفحه اصلی - چشم‌انداز -->
+      <div class="mb-8 bg-slate-50 rounded-2xl p-6 border border-slate-200">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🖼️</span>
+          <h3 class="text-lg font-bold text-slate-800">
+            چشم‌انداز صفحه اصلی فروشگاه
+          </h3>
+          <span class="text-sm text-slate-400 mr-2"
+            >(یک نمونه از طراحی احتمالی)</span
+          >
+        </div>
+        <p class="text-slate-500 text-sm mb-4">
+          یک صفحه اصلی جذاب و حرفه‌ای می‌تواند چیز شبیه به این باشد:
+        </p>
+        <div class="bg-white rounded-xl p-2 shadow-sm">
+          <img
+            src="./assets/screenshot.png"
+            alt="دموی صفحه اصلی فروشگاه عطر - چشم‌انداز"
+            class="demo-image w-full"
+            onerror="
+              this.style.display = 'none';
+              document.getElementById('fallback-demo').style.display = 'block';
+            "
+          />
+          <div
+            id="fallback-demo"
+            class="hidden text-center py-8 text-slate-400 text-sm"
+          >
+            <span class="block text-4xl mb-2">📷</span>
+            تصویر دمو در مسیر
+            <span class="font-mono text-xs">assets/screenshot.png</span> قرار
+            ندارد.
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 mt-3">
+          * این تصویر صرفاً یک نمونه بصری برای درک بهتر فضای طراحی است.
         </p>
       </div>
 
-      <!-- زمان‌بندی و پشتیبانی -->
+      <!-- نکات مهم درباره هزینه‌های جانبی -->
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-8">
+        <h3 class="font-bold text-amber-800 flex items-center gap-2 mb-3">
+          <span>⚠️</span> نکات مهم درباره هزینه‌های جانبی
+        </h3>
+        <ul class="list-disc list-inside space-y-2 text-sm text-amber-700 pr-4">
+          <li>
+            <span class="font-semibold">هزینه سرور، هاست و دامنه</span> و تمدید
+            آن‌ها به عهده کارفرما (شما) خواهد بود.
+          </li>
+          <li>
+            <span class="font-semibold">پیاده‌سازی با Next.js</span> نیازمند
+            <span class="font-bold">سرور VPS اختصاصی</span> بوده و با هاست‌های
+            معمولی وردپرسی پاسخگو نیست.
+          </li>
+          <li>
+            <span class="font-semibold">هزینه سرویس هوش مصنوعی (AI)</span> برای
+            خلاصه‌سازی نظرات، جداگانه و بر اساس مصرف سرویس‌دهنده محاسبه می‌شود.
+          </li>
+          <li>
+            <span class="font-semibold">هزینه پنل پیامکی</span> نیز جداگانه و
+            مطابق با تعرفه‌های سرویس‌دهنده پیامک خواهد بود.
+          </li>
+        </ul>
+      </div>
+
+      <!-- پشتیبانی و نحوه پرداخت -->
       <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 pt-6 border-t border-slate-200 text-sm"
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-200 text-sm"
       >
-        <!-- <div>
-          <span class="font-bold text-slate-700 block">⏱ زمان تحویل</span>
-          <span class="text-slate-500">سناریوی استاندارد: ۴ تا ۵ هفته</span>
-          <span class="text-slate-500 block">سناریوی پیشرفته: ۶ تا ۸ هفته</span>
-        </div> -->
         <div>
           <span class="font-bold text-slate-700 block">🛡 پشتیبانی</span>
           <span class="text-slate-500">۳ ماه رایگان پس از تحویل</span>
@@ -378,7 +432,7 @@
     <script>
       (function () {
         const BASE_PRICE = 200000000;
-        const BASE_TIME = 4; // هفته
+        const BASE_TIME = 6;
 
         const basePriceDisplay = document.getElementById("basePriceDisplay");
         const totalPriceSpan = document.getElementById("totalPrice");
@@ -411,7 +465,6 @@
           totalPriceSpan.textContent = formatNumber(totalPrice);
 
           baseTimeDisplay.textContent = BASE_TIME;
-          // نمایش زمان با یک رقم اعشار در صورت نیاز
           totalTimeSpan.textContent = Number.isInteger(totalTime)
             ? totalTime
             : totalTime.toFixed(1);
