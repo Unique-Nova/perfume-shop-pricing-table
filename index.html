@@ -8,246 +8,84 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-      :root {
-        --gold: #b8860b;
-        --gold-dark: #8a6508;
-        --gold-soft: #fbf6ed;
-        --ink: #172033;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
       body {
-        margin: 0;
         font-family: "IRANSans_FaNum", Tahoma, sans-serif;
-        background: #f5f7fa;
-        color: #475569;
-      }
-      .card-shadow {
-        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-      }
-      .text-gold {
-        color: var(--gold);
-      }
-      .bg-gold-soft {
-        background: var(--gold-soft);
-      }
-      .section-title::before {
-        content: "";
-        width: 4px;
-        height: 28px;
-        border-radius: 99px;
-        background: var(--gold);
-        display: inline-block;
-      }
-      .feature-table th,
-      .feature-table td {
-        padding: 14px 16px;
-        vertical-align: top;
-        border-bottom: 1px solid #e8edf3;
-      }
-      .feature-table tbody tr:last-child td {
-        border-bottom: 0;
-      }
-      .feature-table tbody tr:hover {
-        background: #fbfcfe;
-      }
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 10px;
-        border-radius: 999px;
-        background: #f1f5f9;
-        color: #475569;
-        font-size: 12px;
-        white-space: nowrap;
-      }
-      .included-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 4px 9px;
-        border-radius: 999px;
-        background: #ecfdf5;
-        color: #047857;
-        font-size: 11px;
-        white-space: nowrap;
-      }
-      .optional-card {
-        display: block;
-        border: 1px solid #dfe5ec;
-        background: white;
-        border-radius: 16px;
-        padding: 16px;
-        cursor: pointer;
-        transition: 0.18s ease;
-      }
-      .optional-card:hover {
-        transform: translateY(-2px);
-        border-color: #c9a84c;
-        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
-      }
-      .optional-card:has(input:checked) {
-        border-color: var(--gold);
-        background: #fffdf7;
-        box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
-      }
-      .optional-card input[type="checkbox"] {
-        width: 19px;
-        height: 19px;
-        accent-color: var(--gold);
-        flex: none;
-      }
-      .price-tag,
-      .time-tag {
-        display: inline-flex;
-        align-items: center;
-        border-radius: 999px;
-        font-size: 11px;
-        padding: 4px 8px;
-        white-space: nowrap;
-      }
-      .price-tag {
-        background: #f1f5f9;
-        color: #334155;
-      }
-      .time-tag {
-        background: #eef2ff;
-        color: #4338ca;
-      }
-      .mock-browser {
-        overflow: hidden;
-        border: 1px solid #e2e8f0;
-        border-radius: 18px;
-        background: white;
-        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      }
-      .mock-line {
-        height: 8px;
-        border-radius: 99px;
-        background: #e2e8f0;
-      }
-      .mock-product {
-        border: 1px solid #edf0f4;
-        border-radius: 12px;
-        padding: 10px;
-      }
-      .summary-sticky {
-        position: sticky;
-        bottom: 16px;
-        z-index: 20;
-      }
-      .preview-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 18px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      }
-      .guide-card {
-        border: 1px solid #e2e8f0;
-        border-radius: 16px;
-        background: white;
-        padding: 16px;
-      }
-      .guide-card strong {
-        color: #0f172a;
-        display: block;
-        margin-bottom: 6px;
-      }
-      .guide-card ul {
-        margin: 0;
-        padding-right: 18px;
-      }
-      .guide-card li {
-        margin-bottom: 4px;
-      }
-      .demo-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 18px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      }
-      @media print {
-        body {
-          background: white;
-        }
-        .card-shadow {
-          box-shadow: none;
-        }
-        .summary-sticky {
-          position: static;
-        }
-        .optional-card {
-          break-inside: avoid;
-        }
       }
     </style>
   </head>
-  <body class="antialiased p-4 md:p-10">
+  <body
+    class="m-0 p-0 md:p-10 bg-[#f5f3ef] text-[#4b4540] antialiased print:bg-white print:p-0"
+  >
     <main
-      class="max-w-7xl mx-auto bg-white rounded-[28px] card-shadow p-5 md:p-10"
+      class="max-w-7xl mx-auto bg-white md:rounded-[32px] shadow-none md:shadow-[0_30px_80px_rgba(28,25,23,0.06),0_8px_20px_rgba(28,25,23,0.04)] print:shadow-none p-4 md:p-12"
     >
       <!-- Header -->
-      <header class="border-b border-slate-200 pb-7 mb-8">
+      <header class="border-b border-stone-200 pb-6 mb-8 md:pb-8 md:mb-10">
         <div
-          class="flex flex-col lg:flex-row lg:items-center justify-between gap-5"
+          class="flex flex-col lg:flex-row lg:items-end justify-between gap-8"
         >
           <div>
             <div
-              class="inline-flex items-center gap-2 text-xs text-gold bg-amber-50 border border-amber-100 rounded-full px-3 py-1 mb-3"
+              class="inline-flex items-center gap-2 text-xs text-[#a07c35] bg-[#f9f6ef] rounded-full px-4 py-2 mb-5 font-semibold"
             >
-              <span>✦</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#a07c35]"></span>
               <span>پیشنهاد طراحی و توسعه فروشگاه تخصصی عطر</span>
             </div>
             <h1
-              class="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight"
+              class="text-2xl md:text-5xl font-extrabold text-stone-900 leading-tight tracking-tight"
             >
-              فروشگاه آنلاین عطر و ادکلن با پنل مدیریت کامل
+              فروشگاه آنلاین عطر و ادکلن<br class="hidden md:block" />با پنل
+              مدیریت کامل
             </h1>
-            <p class="mt-2 text-sm md:text-base text-slate-500">
+            <p
+              class="mt-3 md:mt-4 text-sm md:text-base text-stone-500 max-w-xl leading-7"
+            >
               زیرساخت WordPress + WooCommerce، طراحی اختصاصی فارسی و امکان ارتقا
               به معماری Headless با Next.js
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-3 min-w-[280px]">
+          <div class="flex gap-4 min-w-[280px]">
             <div
-              class="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-center"
+              class="flex-1 rounded-2xl bg-stone-50 border border-stone-200 p-4 md:p-5 text-center"
             >
-              <span class="block text-xs text-slate-500">قیمت پایه</span>
+              <span class="block text-xs text-stone-500 mb-2">قیمت پایه</span>
               <strong
-                class="block text-xl text-slate-900 mt-1"
+                class="block text-xl md:text-2xl text-stone-900"
                 id="basePriceDisplay"
                 >۲۰۰,۰۰۰,۰۰۰</strong
               >
-              <span class="text-xs text-slate-400">تومان</span>
+              <span class="text-xs text-stone-400 mt-1 block">تومان</span>
             </div>
             <div
-              class="rounded-2xl bg-gold-soft border border-amber-100 p-4 text-center"
+              class="flex-1 rounded-2xl bg-[#f9f6ef] border border-stone-200 p-4 md:p-5 text-center"
             >
-              <span class="block text-xs text-slate-500">زمان پایه</span>
-              <strong class="block text-xl text-gold mt-1" id="baseTimeDisplay"
+              <span class="block text-xs text-[#836629] mb-2">زمان پایه</span>
+              <strong
+                class="block text-xl md:text-2xl text-[#836629]"
+                id="baseTimeDisplay"
                 >۶</strong
               >
-              <span class="text-xs text-slate-400">هفته</span>
+              <span class="text-xs text-stone-400 mt-1 block">هفته</span>
             </div>
           </div>
         </div>
       </header>
+
       <!-- Vision -->
-      <section class="grid grid-cols-1 lg:grid-cols-[1.25fr_.75fr] gap-5 mb-10">
+      <section
+        class="grid grid-cols-1 lg:grid-cols-[1.25fr_.75fr] gap-5 md:gap-6 mb-8 md:mb-12"
+      >
         <div
-          class="bg-gold-soft rounded-2xl border border-amber-100 p-5 md:p-6"
+          class="bg-[#f9f6ef] rounded-xl md:rounded-2xl p-5 md:p-8 border border-stone-200"
         >
-          <h2 class="font-bold text-slate-900 mb-2">چشم‌انداز پروژه</h2>
-          <p class="leading-8 text-sm md:text-base">
+          <h2
+            class="text-base md:text-lg font-bold mb-3 flex items-center gap-2 text-stone-900"
+          >
+            <span class="w-8 h-px bg-[#a07c35]"></span> چشم‌انداز پروژه
+          </h2>
+          <p
+            class="leading-7 md:leading-8 text-sm md:text-base text-stone-700 font-light"
+          >
             طراحی یک فروشگاه حرفه‌ای، سریع و قابل‌توسعه برای فروش عطر و ادکلن؛
             با ساختار تخصصی رایحه، تجربه خرید کامل، صفحات محتوایی، پنل مشتری و
             پنل مدیریتی که کارهای روزمره فروشگاه را بدون پیچیدگی پوشش دهد.
@@ -255,212 +93,360 @@
             بازطراحی کل سامانه به آن اضافه خواهند شد.
           </p>
         </div>
-        <div class="rounded-2xl border border-slate-200 p-5 md:p-6">
-          <h2 class="font-bold text-slate-900 mb-3">خروجی اصلی</h2>
+        <div
+          class="rounded-xl md:rounded-2xl border border-stone-200 p-5 md:p-8 bg-white"
+        >
+          <h2
+            class="text-base md:text-lg font-bold text-stone-900 mb-4 md:mb-5"
+          >
+            خروجی اصلی
+          </h2>
           <div class="flex flex-wrap gap-2">
-            <span class="pill">فروشگاه واکنش‌گرا</span>
-            <span class="pill">پنل مشتری</span>
-            <span class="pill">مدیریت فروشگاه</span>
-            <span class="pill">وبلاگ و محتوا</span>
-            <span class="pill">پرداخت و ارسال</span>
-            <span class="pill">گزارش‌گیری</span>
-            <span class="pill">آموزش و تحویل</span>
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >فروشگاه واکنش‌گرا</span
+            >
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >پنل مشتری</span
+            >
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >مدیریت فروشگاه</span
+            >
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >وبلاگ و محتوا</span
+            >
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >پرداخت و ارسال</span
+            >
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >گزارش‌گیری</span
+            >
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-3.5 md:py-2 rounded-lg bg-white border border-stone-200 text-stone-600 text-xs md:text-[13px] font-medium whitespace-nowrap transition hover:border-[#a07c35] hover:text-[#836629]"
+              >آموزش و تحویل</span
+            >
           </div>
         </div>
       </section>
+
       <!-- Delivered pages -->
-      <section class="mb-10">
+      <section class="mb-8 md:mb-12">
         <h2
-          class="section-title text-xl font-bold text-slate-900 flex items-center gap-3 mb-4"
+          class="relative pr-4 text-lg md:text-xl font-bold text-stone-900 flex items-center gap-3 mb-4 md:mb-6"
         >
+          <span
+            class="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-full bg-[#a07c35]"
+          ></span>
           صفحات و بخش‌های تحویلی
         </h2>
         <div
-          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-sm"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-xs md:text-sm"
         >
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             صفحه اصلی
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             فروشگاه و دسته‌بندی
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             جزئیات محصول
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             راهنمای انتخاب عطر
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             سبد خرید
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             تسویه‌حساب
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             ورود و ثبت‌نام
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             پنل کاربری
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             وبلاگ و مقاله
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             درباره ما
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             تماس با ما
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             قوانین و مقررات
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             پیگیری سفارش
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             فاکتور سفارش
           </div>
-          <div class="rounded-xl bg-slate-50 border border-slate-200 p-3">
+          <div
+            class="rounded-lg bg-stone-50 border border-stone-200 p-3 md:p-4 text-center text-stone-700 transition hover:bg-white hover:border-stone-900"
+          >
             پنل مدیریت
           </div>
         </div>
       </section>
+
       <!-- Base feature table -->
-      <section class="mb-10">
-        <div class="flex flex-wrap items-end justify-between gap-3 mb-4">
+      <section class="mb-8 md:mb-12">
+        <div
+          class="flex flex-wrap items-center justify-between gap-3 mb-4 md:mb-6"
+        >
           <h2
-            class="section-title text-xl font-bold text-slate-900 flex items-center gap-3"
+            class="relative pr-4 text-lg md:text-xl font-bold text-stone-900 flex items-center gap-3"
           >
+            <span
+              class="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-full bg-[#a07c35]"
+            ></span>
             امکانات پایه فروشگاه
           </h2>
-          <span class="included-badge">✓ در قیمت پایه محاسبه شده</span>
+          <span
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#f9f6ef] text-[#836629] text-xs font-semibold whitespace-nowrap"
+            >✓ در قیمت پایه محاسبه شده</span
+          >
         </div>
-        <div class="overflow-x-auto rounded-2xl border border-slate-200">
-          <table class="feature-table w-full text-sm min-w-[660px]">
-            <thead class="bg-slate-50 text-slate-700">
-              <tr>
-                <th class="text-right w-[27%]">بخش</th>
-                <th class="text-right">شرح امکانات</th>
+        <div
+          class="rounded-xl md:rounded-2xl border border-stone-200 shadow-sm overflow-hidden"
+        >
+          <table class="w-full text-xs md:text-sm border-collapse">
+            <thead>
+              <tr class="bg-[#f9f6ef] text-[#1c1917]">
+                <th
+                  class="text-right w-1/3 md:w-[27%] whitespace-nowrap p-3 md:p-5 border-b-2 border-[#a07c35] font-bold"
+                >
+                  بخش
+                </th>
+                <th
+                  class="text-right p-3 md:p-5 border-b-2 border-[#a07c35] font-bold"
+                >
+                  شرح امکانات
+                </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   مدیریت تخصصی محصولات
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   ثبت و ویرایش نام فارسی و انگلیسی، برند، مدل، SKU، دسته‌بندی،
                   نوع عطر، حجم، جنسیت، قیمت اصلی و تخفیف، موجودی، وضعیت انتشار،
                   تصویر شاخص و گالری.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   اطلاعات تخصصی رایحه
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   خانواده بویایی، آکوردها، نت‌های آغازین، میانی و پایه،
                   ماندگاری، پخش بو، فصل و موقعیت مناسب استفاده.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   فروشگاه، جستجو و فیلتر
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   جستجو در نام، مدل و اطلاعات محصول؛ فیلتر برند، قیمت، حجم،
                   جنسیت، نوع، خانواده رایحه، آکورد، نت، ماندگاری، پخش بو، فصل،
                   موجودی و تخفیف؛ مرتب‌سازی و صفحه‌بندی.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">صفحه محصول حرفه‌ای</td>
-                <td>
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
+                  صفحه محصول حرفه‌ای
+                </td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   گالری، قیمت و موجودی، توضیحات، ویژگی‌های تخصصی، هرم نت‌ها،
                   دیدگاه و امتیاز، محصولات مشابه و اخیراً مشاهده‌شده.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   کارت و نمایش سریع محصول
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   نمایش سریع، نشان تخفیف و ویژه، افزودن مستقیم به سبد،
                   علاقه‌مندی، مقایسه و کنترل تعداد محصول.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">راهنمای انتخاب عطر</td>
-                <td>
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
+                  راهنمای انتخاب عطر
+                </td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   فرم انتخاب بر اساس سلیقه، جنسیت، خانواده رایحه، فصل و موقعیت
                   استفاده و هدایت کاربر به نتایج مناسب.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">سبد خرید و کوپن</td>
-                <td>
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
+                  سبد خرید و کوپن
+                </td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   سبد پایدار، افزایش و کاهش تعداد، حذف کالا، محاسبه تخفیف و
                   هزینه ارسال، کد تخفیف و نمایش جمع نهایی به تومان.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">پرداخت آنلاین</td>
-                <td>
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
+                  پرداخت آنلاین
+                </td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   فرآیند کامل تسویه‌حساب و ثبت سفارش، اتصال و راه‌اندازی یک
                   درگاه بانکی انتخابی، مدیریت نتیجه موفق، ناموفق، لغوشده یا در
                   انتظار و حفظ صحیح سبد خرید در صورت بروز خطا.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   ایمیل و پیامک سفارش
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   پیاده‌سازی سناریوهای اصلی اطلاع‌رسانی ثبت سفارش و تغییر وضعیت
                   برای مشتری و مدیر، از طریق اتصال به سرویس ایمیل و پنل پیامکی
                   انتخابی کارفرما.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">بازاریابی و فروش</td>
-                <td>
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
+                  بازاریابی و فروش
+                </td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   کوپن، فروش ویژه، کمپین زمان‌دار، شمارش معکوس، بنر و جایگاه
                   تبلیغاتی، محصولات جدید/ویژه/تخفیف‌دار، خبرنامه و پیشنهادهای
                   مرتبط.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   وبلاگ و صفحات محتوایی
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   وبلاگ، صفحه مقاله، درباره ما، تماس با ما، قوانین و مقررات،
                   محتوای راهنما، مدیریت منو و بخش‌های اصلی سایت.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">پنل مشتری</td>
-                <td>
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
+                  پنل مشتری
+                </td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   داشبورد، سفارش‌ها، فاکتور چاپی، پیگیری سفارش، آدرس‌ها،
                   علاقه‌مندی، مقایسه، دیدگاه‌ها، تیکت پشتیبانی، مرجوعی و کیف پول
                   نمایشی.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   طراحی فارسی و واکنش‌گرا
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   طراحی RTL، فونت فارسی، نمایش تومان، سازگاری
                   موبایل/تبلت/دسکتاپ، بهینه‌سازی تجربه کاربری و رعایت ساختار
                   مناسب فروشگاه ایرانی.
                 </td>
               </tr>
-              <tr>
-                <td class="font-semibold text-slate-800">
+              <tr
+                class="border-b border-stone-200 last:border-0 hover:bg-white transition-colors"
+              >
+                <td class="font-bold text-stone-900 p-3 md:p-5 align-top">
                   آموزش و پشتیبانی تحویل
                 </td>
-                <td>
+                <td
+                  class="text-stone-600 p-3 md:p-5 leading-6 md:leading-7 align-top"
+                >
                   آموزش مدیریت محصولات، سفارش‌ها، محتوا و تخفیف‌ها؛ به‌همراه سه
                   ماه پشتیبانی پس از تحویل نهایی برای رفع باگ، راهنمایی و
                   اصلاحات جزئی.
@@ -470,75 +456,140 @@
           </table>
         </div>
       </section>
+
       <!-- Admin details -->
-      <section class="mb-10 rounded-2xl bg-slate-900 text-slate-200 p-5 md:p-7">
-        <div class="flex flex-col lg:flex-row gap-6">
+      <section
+        class="mb-8 md:mb-12 rounded-xl md:rounded-2xl bg-stone-50 border border-stone-200 p-5 md:p-10"
+      >
+        <div class="flex flex-col lg:flex-row gap-6 md:gap-8">
           <div class="lg:w-[31%]">
-            <span class="text-amber-300 text-sm"
+            <span class="text-[#a07c35] text-xs md:text-sm font-bold"
               >مدیریت روزمره بدون پیچیدگی</span
             >
-            <h2 class="text-2xl font-bold text-white mt-2 mb-3">
+            <h2
+              class="text-xl md:text-3xl font-extrabold text-stone-900 mt-2 md:mt-3 mb-3 md:mb-4"
+            >
               پنل مدیریت کامل‌تر
             </h2>
-            <p class="text-sm leading-7 text-slate-300">
+            <p class="text-xs md:text-sm leading-7 md:leading-8 text-stone-600">
               بخش مدیریت فقط به ثبت محصول محدود نیست و تمام عملیات اصلی فروشگاه
               را در یک ساختار منظم پوشش می‌دهد.
             </p>
           </div>
           <div
-            class="lg:flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 text-sm"
+            class="lg:flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4 text-xs md:text-sm"
           >
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">داشبورد مدیریتی</strong
-              ><span>فروش، سفارش، مشتری، دیدگاه، تیکت و هشدار موجودی</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >داشبورد مدیریتی</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >فروش، سفارش، مشتری، دیدگاه، تیکت و هشدار موجودی</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">محصولات و رسانه</strong
-              ><span>محصول، گالری، ویژگی‌های عطر، قیمت، تخفیف و موجودی</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >محصولات و رسانه</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >محصول، گالری، ویژگی‌های عطر، قیمت، تخفیف و موجودی</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">سفارش‌ها</strong
-              ><span>وضعیت، یادداشت، کد رهگیری، جزئیات پرداخت و فاکتور</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >سفارش‌ها</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >وضعیت، یادداشت، کد رهگیری، جزئیات پرداخت و فاکتور</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">مشتریان</strong
-              ><span>اطلاعات حساب، سفارش‌ها، آدرس‌ها و سوابق تعامل</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >مشتریان</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >اطلاعات حساب، سفارش‌ها، آدرس‌ها و سوابق تعامل</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">فروش و کمپین</strong
-              ><span>کوپن، کمپین، زمان‌بندی، بنر، هدف‌گیری و آمار اولیه</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >فروش و کمپین</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >کوپن، کمپین، زمان‌بندی، بنر، هدف‌گیری و آمار اولیه</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">محتوا</strong
-              ><span>مقالات، صفحات ثابت، دیدگاه‌ها، دسته‌بندی و رسانه</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >محتوا</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >مقالات، صفحات ثابت، دیدگاه‌ها، دسته‌بندی و رسانه</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">پشتیبانی</strong
-              ><span>تیکت، مرجوعی، پاسخ، دپارتمان و تاریخچه وضعیت</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >پشتیبانی</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >تیکت، مرجوعی، پاسخ، دپارتمان و تاریخچه وضعیت</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">گزارش پایه</strong
-              ><span>فروش، سفارش، محصول، موجودی، مشتری و خروجی CSV پایه</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >گزارش پایه</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >فروش، سفارش، محصول، موجودی، مشتری و خروجی CSV پایه</span
+              >
             </div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
-              <strong class="text-white block mb-1">تنظیمات و دسترسی</strong
-              ><span>تنظیم فروشگاه، ارسال، اعلان‌ها و سطح دسترسی مدیران</span>
+            <div
+              class="rounded-xl bg-white border border-stone-200 p-4 md:p-5 shadow-sm transition hover:shadow-md"
+            >
+              <strong class="text-stone-900 block mb-2 text-sm md:text-base"
+                >تنظیمات و دسترسی</strong
+              >
+              <span class="text-stone-500 leading-6"
+                >تنظیم فروشگاه، ارسال، اعلان‌ها و سطح دسترسی مدیران</span
+              >
             </div>
           </div>
         </div>
       </section>
+
       <!-- Optional features -->
       <section class="mb-8">
         <div
-          class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-5"
+          class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-5 md:mb-8"
         >
           <div>
             <h2
-              class="section-title text-xl font-bold text-slate-900 flex items-center gap-3"
+              class="relative pr-4 text-lg md:text-xl font-bold text-stone-900 flex items-center gap-3"
             >
+              <span
+                class="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-full bg-[#a07c35]"
+              ></span>
               امکانات اختیاری و توسعه‌های پیشرفته
             </h2>
-            <p class="text-xs text-slate-500 mt-2">
+            <p
+              class="text-xs text-stone-500 mt-2 md:mt-3 max-w-2xl leading-5 md:leading-6"
+            >
               با انتخاب هر مورد، قیمت و زمان تحویل به‌صورت خودکار محاسبه می‌شود.
               اپلیکیشن اندروید در جمع‌بندی صرفاً به‌عنوان گزینه انتخابی ثبت
               می‌شود و برآورد مالی آن بعداً انجام خواهد شد.
@@ -546,55 +597,78 @@
           </div>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-4"
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5"
           id="optionalFeatures"
         >
-          <label class="optional-card">
-            <div class="flex items-start gap-3">
+          <!-- Card 1 -->
+          <label
+            class="block border border-stone-200 bg-white rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer transition duration-300 ease-in-out h-full hover:-translate-y-1 hover:border-[#a07c35] hover:shadow-[0_20px_40px_rgba(160,124,53,0.08)] has-[:checked]:border-[#a07c35] has-[:checked]:bg-[#f9f6ef] has-[:checked]:shadow-[0_0_0_1px_#a07c35,0_10px_30px_rgba(160,124,53,0.1)]"
+          >
+            <div class="flex items-start gap-3 md:gap-4">
               <input
-                class="extra-feature mt-1"
+                class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
                 data-price="25000000"
                 data-time="4"
                 id="ai-summary"
                 type="checkbox"
               />
               <div class="flex-1 min-w-0">
-                <div class="flex flex-wrap items-center justify-between gap-2">
-                  <strong class="text-slate-900"
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 mb-2 md:mb-3"
+                >
+                  <strong class="text-stone-900 text-sm md:text-base"
                     >هوش مصنوعی پیشرفته برای نظرات و پیشنهاد محصول</strong
                   >
                   <div class="flex gap-1">
-                    <span class="price-tag">+۲۵,۰۰۰,۰۰۰</span
-                    ><span class="time-tag">+۴ هفته</span>
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
+                      >+۲۵,۰۰۰,۰۰۰ تومان</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
+                      >+۴ هفته</span
+                    >
                   </div>
                 </div>
-                <p class="text-xs leading-6 text-slate-500 mt-2">
+                <p class="text-xs leading-6 md:leading-7 text-stone-500">
                   اتصال به سرویس AI خارجی برای خلاصه نظرات، استخراج نکات مثبت و
                   منفی، پاسخ‌گویی محتوایی و پیشنهاد شخصی‌تر محصول.
                 </p>
               </div>
             </div>
           </label>
-          <label class="optional-card">
-            <div class="flex items-start gap-3">
+
+          <!-- Card 2 -->
+          <label
+            class="block border border-stone-200 bg-white rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer transition duration-300 ease-in-out h-full hover:-translate-y-1 hover:border-[#a07c35] hover:shadow-[0_20px_40px_rgba(160,124,53,0.08)] has-[:checked]:border-[#a07c35] has-[:checked]:bg-[#f9f6ef] has-[:checked]:shadow-[0_0_0_1px_#a07c35,0_10px_30px_rgba(160,124,53,0.1)]"
+          >
+            <div class="flex items-start gap-3 md:gap-4">
               <input
-                class="extra-feature mt-1"
-                data-price="18000000"
-                data-time="1.5"
+                class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
+                data-price="15000000"
+                data-time="2"
                 id="advanced-report"
                 type="checkbox"
               />
               <div class="flex-1 min-w-0">
-                <div class="flex flex-wrap items-center justify-between gap-2">
-                  <strong class="text-slate-900"
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 mb-2 md:mb-3"
+                >
+                  <strong class="text-stone-900 text-sm md:text-base"
                     >گزارش‌گیری مدیریتی پیشرفته</strong
                   >
                   <div class="flex gap-1">
-                    <span class="price-tag">+۱۸,۰۰۰,۰۰۰</span
-                    ><span class="time-tag">+۱.۵ هفته</span>
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
+                      >+۱۵,۰۰۰,۰۰۰ تومان</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
+                      >+۲ هفته</span
+                    >
                   </div>
                 </div>
-                <p class="text-xs leading-6 text-slate-500 mt-2">
+                <p class="text-xs leading-6 md:leading-7 text-stone-500">
                   داشبوردهای مقایسه‌ای، بازه زمانی سفارشی، تحلیل فروش و حاشیه
                   سود، نرخ تبدیل، عملکرد کمپین، مشتریان تکراری، محصولات کم‌گردش
                   و خروجی‌های تکمیلی.
@@ -602,26 +676,38 @@
               </div>
             </div>
           </label>
-          <label class="optional-card">
-            <div class="flex items-start gap-3">
+
+          <!-- Card 3 -->
+          <label
+            class="block border border-stone-200 bg-white rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer transition duration-300 ease-in-out h-full hover:-translate-y-1 hover:border-[#a07c35] hover:shadow-[0_20px_40px_rgba(160,124,53,0.08)] has-[:checked]:border-[#a07c35] has-[:checked]:bg-[#f9f6ef] has-[:checked]:shadow-[0_0_0_1px_#a07c35,0_10px_30px_rgba(160,124,53,0.1)]"
+          >
+            <div class="flex items-start gap-3 md:gap-4">
               <input
-                class="extra-feature mt-1"
+                class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
                 data-price="0"
                 data-time="0"
                 id="android-app"
                 type="checkbox"
               />
               <div class="flex-1 min-w-0">
-                <div class="flex flex-wrap items-center justify-between gap-2">
-                  <strong class="text-slate-900"
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 mb-2 md:mb-3"
+                >
+                  <strong class="text-stone-900 text-sm md:text-base"
                     >اپلیکیشن اندروید اختصاصی</strong
                   >
                   <div class="flex gap-1">
-                    <span class="price-tag">برآورد پس از انتخاب</span
-                    ><span class="time-tag">زمان‌بندی جداگانه</span>
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
+                      >برآورد پس از انتخاب</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
+                      >زمان‌بندی جداگانه</span
+                    >
                   </div>
                 </div>
-                <p class="text-xs leading-6 text-slate-500 mt-2">
+                <p class="text-xs leading-6 md:leading-7 text-stone-500">
                   در صورت انتخاب این گزینه، محدوده دقیق اپلیکیشن (صفحات،
                   قابلیت‌ها، اعلان‌ها و سطح اتصال به فروشگاه) مشخص می‌شود و سپس
                   هزینه و زمان اجرای آن به‌صورت جداگانه برآورد خواهد شد.
@@ -629,26 +715,38 @@
               </div>
             </div>
           </label>
-          <label class="optional-card">
-            <div class="flex items-start gap-3">
+
+          <!-- Card 4 -->
+          <label
+            class="block border border-stone-200 bg-white rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer transition duration-300 ease-in-out h-full hover:-translate-y-1 hover:border-[#a07c35] hover:shadow-[0_20px_40px_rgba(160,124,53,0.08)] has-[:checked]:border-[#a07c35] has-[:checked]:bg-[#f9f6ef] has-[:checked]:shadow-[0_0_0_1px_#a07c35,0_10px_30px_rgba(160,124,53,0.1)]"
+          >
+            <div class="flex items-start gap-3 md:gap-4">
               <input
-                class="extra-feature mt-1"
-                data-price="97000000"
+                class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
+                data-price="75000000"
                 data-time="3"
                 id="nextjs-full"
                 type="checkbox"
               />
               <div class="flex-1 min-w-0">
-                <div class="flex flex-wrap items-center justify-between gap-2">
-                  <strong class="text-slate-900"
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 mb-2 md:mb-3"
+                >
+                  <strong class="text-stone-900 text-sm md:text-base"
                     >نسخه Headless کامل با Next.js و پنل ادمین اختصاصی</strong
                   >
                   <div class="flex gap-1">
-                    <span class="price-tag">+۹۷,۰۰۰,۰۰۰</span
-                    ><span class="time-tag">+۳ هفته</span>
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
+                      >+۷۵,۰۰۰,۰۰۰ تومان</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
+                      >+۳ هفته</span
+                    >
                   </div>
                 </div>
-                <p class="text-xs leading-6 text-slate-500 mt-2">
+                <p class="text-xs leading-6 md:leading-7 text-stone-500">
                   این گزینه معماری Headless کامل ارائه می‌دهد و به دلیل
                   پیاده‌سازی فرانت‌اند سریع Next.js، API اختصاصی و پنل مدیریت
                   مستقل، هزینه بالاتری دارد. همچنین برای استقرار، نیازمند سرور
@@ -657,41 +755,57 @@
               </div>
             </div>
           </label>
-          <label class="optional-card">
-            <div class="flex items-start gap-3">
+
+          <!-- Card 5 -->
+          <label
+            class="block border border-stone-200 bg-white rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer transition duration-300 ease-in-out h-full hover:-translate-y-1 hover:border-[#a07c35] hover:shadow-[0_20px_40px_rgba(160,124,53,0.08)] has-[:checked]:border-[#a07c35] has-[:checked]:bg-[#f9f6ef] has-[:checked]:shadow-[0_0_0_1px_#a07c35,0_10px_30px_rgba(160,124,53,0.1)]"
+          >
+            <div class="flex items-start gap-3 md:gap-4">
               <input
-                class="extra-feature mt-1"
-                data-price="38000000"
+                class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
+                data-price="35000000"
                 data-time="3"
                 id="second-theme"
                 type="checkbox"
               />
               <div class="flex-1 min-w-0">
-                <div class="flex flex-wrap items-center justify-between gap-2">
-                  <strong class="text-slate-900"
-                    >طراحی و پیاده‌سازی قالب دوم اختصاصی</strong
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 mb-2 md:mb-3"
+                >
+                  <strong class="text-stone-900 text-sm md:text-base"
+                    >ساخت پوسته دوم با قابلیت سوئیچ بین قالب‌ها (Template
+                    Switcher)</strong
                   >
                   <div class="flex gap-1">
-                    <span class="price-tag">+۳۸,۰۰۰,۰۰۰</span
-                    ><span class="time-tag">+۳ هفته</span>
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
+                      >+۳۵,۰۰۰,۰۰۰ تومان</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
+                      >+۳ هفته</span
+                    >
                   </div>
                 </div>
-                <p class="text-xs leading-6 text-slate-500 mt-2">
-                  طراحی هویت بصری دوم برای کمپین، برند فرعی یا بازار متفاوت؛
-                  شامل صفحه اصلی، فروشگاه، محصول و اجزای مشترک با قابلیت تغییر
-                  بین قالب‌ها.
+                <p class="text-xs leading-6 md:leading-7 text-stone-500">
+                  پیاده‌سازی یک پوسته دوم با طراحی و هویت بصری مجزا که کاربر
+                  بتواند به‌راحتی بین دو قالب اصلی و فرعی جابه‌جا شود. مناسب
+                  برای کمپین‌های فصلی، برند فرعی یا ارائه دو تجربه بصری متفاوت
+                  از فروشگاه.
                 </p>
               </div>
             </div>
           </label>
+
+          <!-- Card 6 -->
           <div
-            class="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 flex items-center"
+            class="rounded-xl md:rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-4 md:p-6 flex items-center"
           >
             <div>
-              <strong class="text-slate-800 block"
+              <strong class="text-stone-900 block text-sm md:text-base"
                 >سرویس‌های بیرونی قابل اتصال</strong
               >
-              <p class="text-xs leading-6 text-slate-500 mt-1">
+              <p class="text-xs leading-6 md:leading-7 text-stone-500 mt-2">
                 درگاه بانکی، ایمیل، پیامک، شرکت حمل، سامانه مالیاتی، میزبانی و
                 AI با حساب و قرارداد کارفرما راه‌اندازی می‌شوند. هزینه اشتراک و
                 مصرف سرویس‌دهنده جداست.
@@ -700,58 +814,71 @@
           </div>
         </div>
       </section>
+
       <!-- Dynamic summary -->
       <section
-        class="summary-sticky rounded-2xl border border-slate-200 bg-white/95 backdrop-blur p-4 md:p-5 shadow-xl mb-10"
+        class="sticky bottom-0 md:bottom-4 z-20 rounded-none md:rounded-xl border border-stone-200 bg-white p-3 md:p-4 shadow-lg print:static mb-8 md:mb-12"
       >
-        <div
-          class="flex flex-col lg:flex-row lg:items-center justify-between gap-4"
-        >
-          <div class="flex flex-wrap items-center gap-x-8 gap-y-3">
-            <div>
-              <span class="text-xs text-slate-500 block mb-1">قیمت نهایی</span>
-              <div class="flex items-baseline gap-2">
-                <strong
-                  class="text-2xl md:text-3xl font-extrabold text-gold"
-                  id="totalPrice"
-                  >۲۰۰,۰۰۰,۰۰۰</strong
-                >
-                <span class="text-xs text-slate-500">تومان</span>
-              </div>
-            </div>
-            <div>
-              <span class="text-xs text-slate-500 block mb-1">زمان تحویل</span>
-              <div class="flex items-baseline gap-2">
-                <strong
-                  class="text-2xl md:text-3xl font-extrabold text-indigo-700"
-                  id="totalTime"
-                  >۶</strong
-                >
-                <span class="text-xs text-slate-500">هفته</span>
-              </div>
-            </div>
-          </div>
-          <div class="lg:text-left">
-            <span class="text-xs text-slate-500 block"
-              >آپشن‌های انتخاب‌شده</span
+        <div class="flex flex-row items-center justify-between gap-2 md:gap-4">
+          <div class="flex items-baseline gap-1 md:gap-2">
+            <span class="text-[10px] md:text-xs text-stone-500 hidden sm:block"
+              >قیمت نهایی:</span
             >
-            <strong class="text-sm text-slate-800" id="selectedCount"
+            <strong
+              class="text-base md:text-2xl font-extrabold text-stone-900"
+              id="totalPrice"
+              >۲۰۰,۰۰۰,۰۰۰</strong
+            >
+            <span class="text-[10px] md:text-xs text-stone-400 hidden sm:block"
+              >تومان</span
+            >
+          </div>
+          <div class="h-6 md:h-8 w-px bg-stone-200"></div>
+          <div class="flex items-baseline gap-1 md:gap-2">
+            <span class="text-[10px] md:text-xs text-stone-500 hidden sm:block"
+              >زمان تحویل:</span
+            >
+            <strong
+              class="text-base md:text-2xl font-extrabold text-[#a07c35]"
+              id="totalTime"
+              >۶</strong
+            >
+            <span class="text-[10px] md:text-xs text-stone-400 hidden sm:block"
+              >هفته</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-2 mr-auto lg:mr-0 pr-3 md:pr-4 border-r border-stone-200"
+          >
+            <span class="text-[10px] md:text-xs text-stone-500 hidden md:block"
+              >آپشن‌های انتخاب‌شده:</span
+            >
+            <strong
+              class="text-[10px] md:text-sm text-stone-700"
+              id="selectedCount"
               >بدون آپشن اضافه</strong
             >
           </div>
         </div>
       </section>
-      <!-- Visual preview - now full width and centered -->
+
+      <!-- Visual preview -->
       <section
-        class="mb-10 rounded-2xl bg-slate-50 border border-slate-200 p-5 md:p-7"
+        class="mb-8 md:mb-12 rounded-xl md:rounded-2xl bg-stone-50 border border-stone-200 p-5 md:p-10"
       >
         <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-5">
-            <span class="text-xs text-gold">نمای ظاهری پیشنهادی</span>
-            <h2 class="text-xl font-bold text-slate-900 mt-2">
+          <div class="text-center mb-6 md:mb-8">
+            <span class="text-[10px] md:text-xs text-[#a07c35] font-bold"
+              >نمای ظاهری پیشنهادی</span
+            >
+            <h2
+              class="text-xl md:text-2xl font-extrabold text-stone-900 mt-2 md:mt-3"
+            >
               نمونه ظاهر پیشنهادی فروشگاه
             </h2>
-            <p class="text-sm text-slate-500 leading-7 mt-2 max-w-2xl mx-auto">
+            <p
+              class="text-xs md:text-sm text-stone-500 leading-6 md:leading-7 mt-2 md:mt-3 max-w-2xl mx-auto"
+            >
               تصویر زیر به‌عنوان رفرنس نمای ظاهری پیشنهادی در ارائه آمده است.
               چیدمان نهایی می‌تواند بر اساس سلیقه کارفرما، رنگ سازمانی، لوگو و
               نوع محتوای واقعی فروشگاه شخصی‌سازی شود.
@@ -761,7 +888,7 @@
             <img
               src="./assets/screenshot.png"
               alt="دموی صفحه اصلی فروشگاه عطر - چشم‌انداز"
-              class="demo-image w-full"
+              class="block w-full h-auto rounded-xl md:rounded-2xl border border-stone-200 shadow-[0_20px_50px_rgba(28,25,23,0.08)]"
               onerror="
                 this.style.display = 'none';
                 document.getElementById('fallback-demo').style.display =
@@ -770,9 +897,9 @@
             />
             <div
               id="fallback-demo"
-              class="hidden text-center py-8 text-slate-400 text-sm"
+              class="hidden text-center py-12 text-stone-400 text-sm bg-white rounded-xl border border-stone-200"
             >
-              <span class="block text-4xl mb-2">📷</span>
+              <span class="block text-4xl mb-4">📷</span>
               تصویر دمو در مسیر
               <span class="font-mono text-xs">assets/screenshot.png</span> قرار
               ندارد.
@@ -780,13 +907,23 @@
           </div>
         </div>
       </section>
+
       <!-- Costs and scope -->
-      <section class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-9">
-        <div class="rounded-2xl bg-amber-50 border border-amber-200 p-5">
-          <h3 class="font-bold text-amber-900 mb-3">
+      <section
+        class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 mb-8 md:mb-12"
+      >
+        <div
+          class="rounded-xl md:rounded-2xl border border-stone-200 p-5 md:p-8 bg-white"
+        >
+          <h3
+            class="font-bold text-stone-900 mb-4 md:mb-5 flex items-center gap-2 text-base md:text-lg"
+          >
+            <span class="w-1.5 h-5 bg-amber-500 rounded-full"></span>
             نکات هزینه سرویس‌های جانبی
           </h3>
-          <ul class="text-sm leading-7 text-amber-800 space-y-1 list-disc pr-5">
+          <ul
+            class="text-xs md:text-sm leading-7 md:leading-8 text-stone-600 space-y-2 list-disc pr-5"
+          >
             <li>هزینه دامنه، سرور یا هاست و تمدید آن‌ها بر عهده کارفرماست.</li>
             <li>
               کارمزد و الزامات درگاه بانکی بر اساس قرارداد پذیرنده محاسبه
@@ -806,9 +943,18 @@
             </li>
           </ul>
         </div>
-        <div class="rounded-2xl bg-blue-50 border border-blue-200 p-5">
-          <h3 class="font-bold text-blue-900 mb-3">فرض‌های اجرایی</h3>
-          <ul class="text-sm leading-7 text-blue-800 space-y-1 list-disc pr-5">
+        <div
+          class="rounded-xl md:rounded-2xl border border-stone-200 p-5 md:p-8 bg-white"
+        >
+          <h3
+            class="font-bold text-stone-900 mb-4 md:mb-5 flex items-center gap-2 text-base md:text-lg"
+          >
+            <span class="w-1.5 h-5 bg-blue-500 rounded-full"></span>
+            فرض‌های اجرایی
+          </h3>
+          <ul
+            class="text-xs md:text-sm leading-7 md:leading-8 text-stone-600 space-y-2 list-disc pr-5"
+          >
             <li>
               ارائه اطلاعات برند، لوگو، رنگ سازمانی و محتوای اولیه از سمت
               کارفرما می‌تواند به دقیق‌تر شدن خروجی کمک کند، اما الزامی نیست.
@@ -827,107 +973,149 @@
           </ul>
         </div>
       </section>
+
       <!-- Service guidance -->
       <section
-        class="mb-9 rounded-2xl border border-slate-200 bg-slate-50 p-5 md:p-6"
+        class="mb-8 md:mb-12 rounded-xl md:rounded-2xl border border-stone-200 bg-white p-5 md:p-10"
       >
-        <div class="mb-5">
-          <span class="text-xs text-gold">راهنمای تهیه سرویس‌های جانبی</span>
-          <h2 class="text-xl font-bold text-slate-900 mt-2">
+        <div class="mb-6 md:mb-8">
+          <span class="text-[10px] md:text-xs text-[#a07c35] font-bold"
+            >راهنمای تهیه سرویس‌های جانبی</span
+          >
+          <h2
+            class="text-xl md:text-2xl font-extrabold text-stone-900 mt-2 md:mt-3"
+          >
             پیشنهادهای ساده‌تر برای راه‌اندازی
           </h2>
-          <p class="text-sm text-slate-500 leading-7 mt-2">
+          <p
+            class="text-xs md:text-sm text-stone-500 leading-6 md:leading-7 mt-2 md:mt-3 max-w-2xl"
+          >
             برای تسهیل فرآیند راه‌اندازی و یکپارچه‌سازی، می‌توان از
             سرویس‌دهنده‌های شناخته‌شده و رایج استفاده کرد. انتخاب نهایی با
             کارفرماست و این موارد صرفاً پیشنهاد اجرایی هستند.
           </p>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 text-sm text-slate-600"
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5 text-xs md:text-sm text-stone-600"
         >
-          <div class="guide-card">
-            <strong>هاست / سرور</strong>
-            <ul class="leading-7">
+          <div
+            class="border border-stone-200 rounded-xl md:rounded-2xl bg-white p-4 md:p-5 transition hover:bg-[#f9f6ef] hover:border-[#a07c35]"
+          >
+            <strong class="text-[#1c1917] block mb-2.5 text-sm md:text-[15px]"
+              >هاست / سرور</strong
+            >
+            <ul class="leading-7 md:leading-8 m-0 pr-5 list-disc">
               <li>ایران‌سرور</li>
               <li>پارس‌پک</li>
               <li>هاست‌ایران</li>
             </ul>
-            <p class="text-xs text-slate-500 mt-3">
+            <p
+              class="text-[10px] md:text-xs text-stone-400 mt-3 md:mt-4 leading-5 md:leading-6 border-t border-stone-100 pt-3"
+            >
               برای نسخه وردپرسی، هاست ووکامرس یا هاست باکیفیت کافی است. برای
               گزینه Next.js، سرور مجزا یا VPS پیشنهاد می‌شود.
             </p>
           </div>
-          <div class="guide-card">
-            <strong>پنل پیامکی</strong>
-            <ul class="leading-7">
+          <div
+            class="border border-stone-200 rounded-xl md:rounded-2xl bg-white p-4 md:p-5 transition hover:bg-[#f9f6ef] hover:border-[#a07c35]"
+          >
+            <strong class="text-[#1c1917] block mb-2.5 text-sm md:text-[15px]"
+              >پنل پیامکی</strong
+            >
+            <ul class="leading-7 md:leading-8 m-0 pr-5 list-disc">
               <li>کاوه‌نگار</li>
               <li>ملی‌پیامک / فراز اس‌ام‌اس</li>
               <li>ippanel</li>
             </ul>
-            <p class="text-xs text-slate-500 mt-3">
+            <p
+              class="text-[10px] md:text-xs text-stone-400 mt-3 md:mt-4 leading-5 md:leading-6 border-t border-stone-100 pt-3"
+            >
               این گزینه‌ها معمولاً API و مستندات مناسبی برای ارسال پیامک‌های
               تراکنشی و اطلاع‌رسانی سفارش دارند.
             </p>
           </div>
-          <div class="guide-card">
-            <strong>درگاه پرداخت</strong>
-            <ul class="leading-7">
+          <div
+            class="border border-stone-200 rounded-xl md:rounded-2xl bg-white p-4 md:p-5 transition hover:bg-[#f9f6ef] hover:border-[#a07c35]"
+          >
+            <strong class="text-[#1c1917] block mb-2.5 text-sm md:text-[15px]"
+              >درگاه پرداخت</strong
+            >
+            <ul class="leading-7 md:leading-8 m-0 pr-5 list-disc">
               <li>زرین‌پال</li>
               <li>IDPay</li>
               <li>درگاه مستقیم بانکی</li>
             </ul>
-            <p class="text-xs text-slate-500 mt-3">
+            <p
+              class="text-[10px] md:text-xs text-stone-400 mt-3 md:mt-4 leading-5 md:leading-6 border-t border-stone-100 pt-3"
+            >
               در پروژه، یک درگاه اصلی راه‌اندازی می‌شود و انتخاب آن بر اساس
               سهولت اخذ و ترجیح کارفرما خواهد بود.
             </p>
           </div>
-          <div class="guide-card">
-            <strong>ایمیل تراکنشی</strong>
-            <ul class="leading-7">
+          <div
+            class="border border-stone-200 rounded-xl md:rounded-2xl bg-white p-4 md:p-5 transition hover:bg-[#f9f6ef] hover:border-[#a07c35]"
+          >
+            <strong class="text-[#1c1917] block mb-2.5 text-sm md:text-[15px]"
+              >ایمیل تراکنشی</strong
+            >
+            <ul class="leading-7 md:leading-8 m-0 pr-5 list-disc">
               <li>SMTP هاست</li>
               <li>Brevo</li>
               <li>Zoho Mail</li>
             </ul>
-            <p class="text-xs text-slate-500 mt-3">
+            <p
+              class="text-[10px] md:text-xs text-stone-400 mt-3 md:mt-4 leading-5 md:leading-6 border-t border-stone-100 pt-3"
+            >
               برای ارسال اعلان‌های ایمیلی سفارش، می‌توان از SMTP هاست یا
               سرویس‌های ایمیلی استاندارد استفاده کرد.
             </p>
           </div>
         </div>
       </section>
+
       <!-- Payment/support -->
       <section
-        class="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-slate-200 pt-7 text-sm"
+        class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 border-t border-stone-200 pt-6 md:pt-8 text-xs md:text-sm"
       >
-        <div class="rounded-xl bg-slate-50 p-4">
-          <strong class="text-slate-900 block mb-2">🛡 پشتیبانی</strong>
-          <span class="text-slate-500">۳ ماه رایگان پس از تحویل</span>
-          <span class="text-slate-500 block mt-1"
+        <div class="rounded-xl bg-stone-50 p-4 md:p-6 border border-stone-100">
+          <strong class="text-stone-900 block mb-2 md:mb-3 text-sm md:text-base"
+            >🛡 پشتیبانی</strong
+          >
+          <span class="text-stone-600 block">۳ ماه رایگان پس از تحویل</span>
+          <span class="text-stone-500 block mt-1 leading-6"
             >رفع باگ، راهنمایی و اصلاحات جزئی</span
           >
         </div>
-        <div class="rounded-xl bg-slate-50 p-4">
-          <strong class="text-slate-900 block mb-2">💳 نحوه پرداخت</strong>
-          <span class="text-slate-500">۴۰٪ شروع پروژه</span>
-          <span class="text-slate-500 block mt-1"
-            >۳۵٪ تأیید طراحی، ۲۵٪ تحویل نهایی</span
+        <div class="rounded-xl bg-stone-50 p-4 md:p-6 border border-stone-100">
+          <strong class="text-stone-900 block mb-2 md:mb-3 text-sm md:text-base"
+            >💳 نحوه پرداخت</strong
+          >
+          <span class="text-stone-600 block">۳۰٪ شروع پروژه</span>
+          <span class="text-stone-500 block mt-1 leading-6"
+            >۲۰٪ تأیید فاز اول، ۵۰٪ تحویل نهایی</span
           >
         </div>
-        <div class="rounded-xl bg-slate-50 p-4">
-          <strong class="text-slate-900 block mb-2">📦 تحویل</strong>
-          <span class="text-slate-500">سورس، تنظیمات و مستندات ضروری</span>
-          <span class="text-slate-500 block mt-1"
+        <div class="rounded-xl bg-stone-50 p-4 md:p-6 border border-stone-100">
+          <strong class="text-stone-900 block mb-2 md:mb-3 text-sm md:text-base"
+            >📦 تحویل</strong
+          >
+          <span class="text-stone-600 block"
+            >سورس، تنظیمات و مستندات ضروری</span
+          >
+          <span class="text-stone-500 block mt-1 leading-6"
             >آموزش مدیریت بخش‌های اصلی سایت</span
           >
         </div>
       </section>
+
       <footer
-        class="mt-9 pt-5 border-t border-slate-200 flex flex-col md:flex-row justify-between gap-2 text-xs text-slate-400"
+        class="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-stone-200 flex flex-col md:flex-row justify-between gap-2 md:gap-3 text-[10px] md:text-xs text-stone-400"
       >
         <span>پروپوزال فروشگاه تخصصی عطر و ادکلن</span>
         <span>تابستان ۱۴۰۵</span>
       </footer>
     </main>
+
     <script>
       (function () {
         const BASE_PRICE = 200000000;
