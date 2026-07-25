@@ -11,7 +11,6 @@
       body {
         font-family: "IRANSans_FaNum", Tahoma, sans-serif;
       }
-      /* افزایش جزئی فونت در موبایل */
       @media (max-width: 640px) {
         .mobile-text-base {
           font-size: 1rem !important;
@@ -32,7 +31,6 @@
           font-size: 0.75rem !important;
         }
       }
-      /* هاورهای ملایم برای کارت‌های غیرقابل کلیک */
       .card-hover-soft:hover {
         background-color: #f9f6ef;
         transition: background-color 0.2s ease;
@@ -681,8 +679,8 @@
               class="text-xs sm:text-sm text-stone-500 mt-2 md:mt-3 max-w-2xl leading-5 md:leading-6 mobile-text-base"
             >
               با انتخاب هر مورد، قیمت و زمان تحویل به‌صورت خودکار محاسبه می‌شود.
-              اپلیکیشن اندروید در جمع‌بندی صرفاً به‌عنوان گزینه انتخابی ثبت
-              می‌شود و برآورد مالی آن بعداً انجام خواهد شد.
+              مواردی که برچسب «برآورد پس از بررسی» دارند، نیاز به بررسی دقیق‌تر
+              دارند و هزینه و زمان آن‌ها بعداً مشخص خواهد شد.
             </p>
           </div>
         </div>
@@ -796,7 +794,7 @@
                   <div class="flex gap-1">
                     <span
                       class="inline-flex items-center rounded-md text-[10px] sm:text-[11px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
-                      >برآورد پس از انتخاب</span
+                      >برآورد پس از بررسی</span
                     >
                     <span
                       class="inline-flex items-center rounded-md text-[10px] sm:text-[11px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
@@ -909,8 +907,8 @@
             <div class="flex items-start gap-3 md:gap-4">
               <input
                 class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
-                data-price="28000000"
-                data-time="2"
+                data-price="0"
+                data-time="0"
                 id="advanced-seo"
                 type="checkbox"
               />
@@ -920,36 +918,77 @@
                 >
                   <strong
                     class="text-stone-900 text-sm sm:text-base md:text-base"
-                    >سئو پیشرفته و بهینه‌سازی حرفه‌ای</strong
+                    >سئو پیشرفته و بهینه‌سازی حرفه‌ای (برآورد پس از
+                    بررسی)</strong
                   >
                   <div class="flex gap-1">
                     <span
                       class="inline-flex items-center rounded-md text-[10px] sm:text-[11px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
-                      >+۲۸,۰۰۰,۰۰۰ تومان</span
+                      >برآورد پس از بررسی</span
                     >
                     <span
                       class="inline-flex items-center rounded-md text-[10px] sm:text-[11px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
-                      >+۲ هفته</span
+                      >زمان‌بندی جداگانه</span
                     >
                   </div>
                 </div>
                 <p
                   class="text-xs sm:text-sm leading-6 md:leading-7 text-stone-500 mobile-text-base"
                 >
-                  پیاده‌سازی کامل Open Graph (og:title, og:description,
-                  og:image, og:url) و Twitter Cards برای تمام صفحات؛ تولید
-                  خودکار JSON-LD و پیاده‌سازی شِمای پیشرفته محصولات (Product
-                  Schema)، مقالات (Article Schema) و Breadcrumb؛ بهینه‌سازی کامل
-                  برای سرعت و Core Web Vitals؛ اتصال و تنظیمات Google Search
-                  Console و Google Analytics؛ تولید خودکار نقشه سایت تصویری
-                  (Image Sitemap)؛ پیاده‌سازی ساختار URL کاملاً بهینه و دوست‌دار
-                  موتورهای جستجو.
+                  در صورت انتخاب این گزینه، نیازمندی‌های دقیق سئو (شامل Open
+                  Graph، Twitter Cards، JSON-LD، Schema Markup، بهینه‌سازی سرعت،
+                  Core Web Vitals، Search Console، Analytics و ساختار URL
+                  پیشرفته) بررسی می‌شود و سپس هزینه و زمان اجرای آن به‌صورت
+                  جداگانه برآورد خواهد شد.
                 </p>
               </div>
             </div>
           </label>
 
           <!-- Card 7 -->
+          <label
+            class="block border border-stone-200 bg-white rounded-xl md:rounded-2xl p-4 md:p-6 cursor-pointer transition duration-300 ease-in-out h-full hover:-translate-y-1 hover:border-[#a07c35] hover:shadow-[0_20px_40px_rgba(160,124,53,0.08)] has-[:checked]:border-[#a07c35] has-[:checked]:bg-[#f9f6ef] has-[:checked]:shadow-[0_0_0_1px_#a07c35,0_10px_30px_rgba(160,124,53,0.1)]"
+          >
+            <div class="flex items-start gap-3 md:gap-4">
+              <input
+                class="extra-feature mt-1 w-5 h-5 accent-[#a07c35] flex-none rounded"
+                data-price="0"
+                data-time="0"
+                id="content-services"
+                type="checkbox"
+              />
+              <div class="flex-1 min-w-0">
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 mb-2 md:mb-3"
+                >
+                  <strong
+                    class="text-stone-900 text-sm sm:text-base md:text-base"
+                    >خدمات تکمیلی و محتوایی (برآورد پس از بررسی)</strong
+                  >
+                  <div class="flex gap-1">
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] sm:text-[11px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-stone-900 text-[#f5f3ef]"
+                      >برآورد پس از بررسی</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-md text-[10px] sm:text-[11px] md:text-[11px] px-2 py-1 md:px-2.5 md:py-1 whitespace-nowrap font-semibold bg-white border border-stone-200 text-[#836629]"
+                      >زمان‌بندی جداگانه</span
+                    >
+                  </div>
+                </div>
+                <p
+                  class="text-xs sm:text-sm leading-6 md:leading-7 text-stone-500 mobile-text-base"
+                >
+                  در صورت نیاز، خدماتی مانند ورود اطلاعات انبوه محصولات، تولید
+                  محتوای تخصصی برای صفحات محصول و وبلاگ، ترجمه تخصصی مطالب به
+                  زبان انگلیسی و ... می‌توانند پس از بررسی نیازمندی‌ها، به‌صورت
+                  جداگانه تعریف و برآورد شوند.
+                </p>
+              </div>
+            </div>
+          </label>
+
+          <!-- Card 8 -->
           <div
             class="rounded-xl md:rounded-2xl border border-dashed border-stone-300 bg-stone-50 p-4 md:p-6 flex items-center"
           >
